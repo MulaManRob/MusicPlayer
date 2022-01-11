@@ -6,12 +6,13 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+
 //Global Variables
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 
 void setup() {
-  size(500, 600); //fullScreen(), displayWidth, displayHeight
+ fullScreen(); //fullScreen(), displayWidth, displayHeight
   population();
   textSetup();
   //
@@ -25,10 +26,10 @@ void draw() {
 }//End draw()
 
 void keyPressed() {
-  if (key == 'p') {
+  if (key == 'p' ll key== 'P') {
     if ( song1.isPlaying() ) {
       song1.pause();
-    } else if ( song1.isPlaying() ) {
+    } else if ( song1.position() >=song1.length()-3000 ) {println ("Here");
       song1.rewind();
       song1.play();
     } else {
