@@ -47,9 +47,9 @@ void keyPressed() {
     }
   }
   //fastforad
-  if (key == 'f') song1.skip(1000);;
+  if (key == 'f') song1.skip(1500);;
   
-  if (key == 'g') song1.skip(-1000);;
+  if (key == 'g') song1.skip(-1500);;
 }//End keyPressed()
 
 void mousePressed() {
