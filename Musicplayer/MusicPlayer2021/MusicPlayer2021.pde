@@ -46,11 +46,15 @@ void keyPressed() {
       song1.rewind();
     }
   }
-  //fastforad
-  if (key == 'f') song1.skip(1500);;
+  //fastforward
+  if (key == 'f') song1.skip(1500);
   
-  if (key == 'g') song1.skip(-1500);;
+  if (key == 'g') song1.skip(-1500);
+  //loopfunction
+  int loopIntNum = 2; //loop hardcore
+  if (key == 'l' || key =='L' ) song1.loop(loopIntNum);// play button
 }//End keyPressed()
+
 
 void mousePressed() {
   powerButtonMousePressed();
