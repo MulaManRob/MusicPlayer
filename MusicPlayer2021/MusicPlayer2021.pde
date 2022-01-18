@@ -8,12 +8,12 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim; //creates object to access all functions
-int numberOfSongs = 3;
+int numberOfSongs = 6;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 int currentSong = numberOfSongs - numberOfSongs; //Current Song is 0
 
 void setup() {
-  size(500, 600); //fullScreen(), displayWidth, displayHeight
+  fullScreen(); //fullScreen(), displayWidth, displayHeight
   population();
   textSetup();
   //
