@@ -3,15 +3,6 @@ void musicPlayerButtons() {
   powerButton();
   //
   //Play-Pause
-if ( song1.isPlaying() ) {
-      song1.pause();
-    } else if ( song1.isPlaying() ) {
-      song1.rewind();
-      song1.play();
-    } else {
-      song1.play();
-    }
-  }
   //Stop
   //Forward & Reverse
   //Next
@@ -20,4 +11,4 @@ if ( song1.isPlaying() ) {
   //Volume Up
   //Volume Down
   //Media
-//End musicPlayerButtons
+}//End musicPlayerButtons
