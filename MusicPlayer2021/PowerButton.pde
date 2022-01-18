@@ -1,9 +1,10 @@
 //global Variables
-String powerButton = "Power";
+String PowerButton = "Power";
 color purple=#FF03F3, yellow=#FFF703, resetWhite=#FFFFFF, buttonColour;
 float powerButtonX, powerButtonY, powerButtonWidth, powerButtonHeight;
 //
-void powerButton() {
+
+void PowerButton() {
   //Population
   powerButtonX = width*29/32;
   powerButtonY = height*0/16;
