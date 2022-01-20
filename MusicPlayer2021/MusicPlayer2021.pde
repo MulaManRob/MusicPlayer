@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim; //creates object to access all functions
-int numberOfSongs = 6;
+int numberOfSongs = 3;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 int currentSong = numberOfSongs - numberOfSongs; //Current Song is 0
 
@@ -18,12 +18,9 @@ void setup() {
   textSetup();
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  song[currentSong] = minim.loadFile("EO-1Take-Naija-To-London-.mp3"); //able to pass absolute path, file name, and URL
-  song[currentSong+1] = minim.loadFile("2Pac - California Love feat. Dr. Dre-.mp3");
-  song[currentSong+2] = minim.loadFile("Ice Cube - It was a good day-.mp3");
-  song[currentSong+3] = minim.loadFile("Damian _Jr. Gong_ Marley - Welcome To Jamrock-.mp3");
-  song[currentSong+4] = minim.loadFile("Bob Marley - Is This Love-.mp3");
-  song[currentSong+5] = minim.loadFile("I Got 5 On It-.mp3");
+  song[currentSong] = minim.loadFile("Ice Cube - It was a good day.mp3"); //able to pass absolute path, file name, and URL
+  song[currentSong+1] = minim.loadFile("Damian _Jr. Gong_ Marley - Welcome To Jamrock.mp3");
+  song[currentSong+2] = minim.loadFile("2Pac - California Love feat. Dr. Dre.mp3");
   //song1.play(); //Parameter is milli-seconds from start of audio file to start playing
 }//End setup()
 
@@ -37,9 +34,10 @@ void keyPressed() {
   if ( key == 'l' || key == 'L') song[currentSong].loop(0); //Parameter is Parameter is number of repeats
   //
   if (key == 'p' || key == 'P') {
-    if ( song[currentSong].isPlaying() ) {
+  {
+    if ( song[currentSong].isPlaying() ) 
       song[currentSong].pause();
-    } else if ( song[currentSong].position() == song[currentSong].length() ) {
+     else if ( song[currentSong].position() == song[currentSong].length() ) {
       song[currentSong].rewind();
       song[currentSong].play();
     } else {
@@ -52,12 +50,12 @@ void keyPressed() {
       song[currentSong].pause();
       song[currentSong].rewind();
       //
-      
+      arrayFixError();
       //
       song[currentSong].play();
     } else {
       song[currentSong].rewind();
-      currentSong ++;
+      arrayFixError();
     }
   } //End Next Button
 }//End keyPressed()
