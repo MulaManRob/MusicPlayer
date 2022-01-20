@@ -19,11 +19,11 @@ void setup() {
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   song[currentSong] = minim.loadFile("EO-1Take-Naija-To-London-.mp3"); //able to pass absolute path, file name, and URL
-  song[currentSong+1] = minim.loadFile("");
-  song[currentSong+2] = minim.loadFile("");
-  song[currentSong+3] = minim.loadFile("");
-  song[currentSong+4] = minim.loadFile("");
-  song[currentSong+5] = minim.loadFile("");
+  song[currentSong+1] = minim.loadFile("2Pac - California Love feat. Dr. Dre-.mp3");
+  song[currentSong+2] = minim.loadFile("Ice Cube - It was a good day-.mp3");
+  song[currentSong+3] = minim.loadFile("Damian _Jr. Gong_ Marley - Welcome To Jamrock-.mp3");
+  song[currentSong+4] = minim.loadFile("Bob Marley - Is This Love-.mp3");
+  song[currentSong+5] = minim.loadFile("I Got 5 On It-.mp3");
   //song1.play(); //Parameter is milli-seconds from start of audio file to start playing
 }//End setup()
 
